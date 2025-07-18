@@ -27,7 +27,16 @@ app.get('/health', (req, res) => {
 // Explanation
 // This endpoint allows users to submit a new quote via a POST request. The quote should be included in the request body as JSON.
 
+app.post('/api/quote', (req, res) => {
+    const {quote} = req.body;
+    if (!quote || typeof quote !== 'string') {
+        return res.status(400).json({ error: 'Invalid quote'})
+    }
+    quotes.push(quote);
+    res.status(201).json({ message: 'Quote added successfully', quote });
+})
+
 app.listen(PORT, () => {
-    console.log("App is noew listening to user requests" + PORT);
-    console.log("Access this service at http://localhost:"+ PORT);
+    console.log("App is now listening to user requests on port " + PORT);
+    console.log("Access this service at http://localhost:" + PORT);
 })
