@@ -42,8 +42,20 @@ app.get('/add', (req, res) => {
 
 }); 
 
+// create POST endpoint at /add
+app.post('/add', (req, res) => {
+    const {a, b} = req.body;
+    if (typeof a !== 'number' || typeof b !== 'number') {
+        return res.status(400).json({ error: 'Invalid input' });
+    }
+    const sum = a + b;
+    res.status(201).json({ message: 'Numbers added successfully', sum });
+});
+
+    
+
 // start the server and listen on the specified port
 app.listen(PORT, () => {
     console.log("App is now listening to user requests on port " + PORT);
-    console.log("Access this service at http://localhost:"+ PORT);
+    console.log("Access this service at http://localhost:" + PORT);
 })
