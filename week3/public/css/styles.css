@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+    flex: 1 0 auto;
+}
+
+.navbar-size {
+    width: 95%;
+    margin: 0 auto;
+}
+.user-image-size {
+    height: 64px;
+    margin: 4px 0;
+}
+.main-body {
+    background-color: #ffd7d8; 
+    color: #EE6E73;
+    padding-bottom: 64px;
+}
+.materialboxed-image {
+    margin: 0 auto;
+    height: 400px;
+}
+.click-me-button {
+    background-color: #EE6E73;
+    margin-top: 16px;
+}
+
