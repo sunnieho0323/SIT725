@@ -1,5 +1,13 @@
 # SIT725 
 
+## Week 3 boostrapping Express APP and using Materialize
+- Set up a basic Express.js server to serve static files
+- Design a front-end using [Materialize CSS](https://materializecss.com/) components such as navbars, modals, buttons, cards, and parallax sections
+- using JS to:
+  - Dynamically generate content (cards)
+  - Bind button click events (e.g. alert pop-up)
+  - Test server response via basic routing
+
 ## Week 2 Express Quote API + Query Parameter Practice
 This is a simple Node.js Express server that:
 - Serves a random quote via `GET /api/quote`
